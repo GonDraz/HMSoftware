@@ -1,6 +1,9 @@
 ﻿Public Class Form1
+    Public model As New Model
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Model.ConnectDataBase()
+
         SwitchForm(Login)
     End Sub
 
