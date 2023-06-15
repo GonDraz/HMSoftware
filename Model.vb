@@ -1,10 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.SQLite
-Imports System.IO
 
 Public Class Model
-    Public dbCommand As String = ""
-    Public bindingSrc As BindingSource
+
     Public dbName As String = "hmsoftware_database.db"
     Public dbPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\" & dbName
     Public connString As String = "Data Source=" & dbPath & "; Version=3 ;PRAGMA legacy_file_format = TRUE; Integrated Security=true"
@@ -14,14 +12,57 @@ Public Class Model
     Public table As New DataTable
 
 
-    Public Sub ConnectDataBase()
-        If File.Exists(dbPath) = False Then
-            File.Create(dbPath)
+    Public Sub CreateDataBase()
 
-            Debug.Print("Đã tạo file tại " & dbPath)
-        Else
+        connection.Open()
+        command.Connection = connection
+        command.CommandText = "Select * from customer"
 
-        End If
+        Try
+            command.ExecuteNonQuery()
+
+        Catch ex As Exception
+            command.CommandText = "
+CREATE TABLE customer (
+    id     INTEGER UNIQUE PRIMARY KEY
+                   NOT NULL,
+    name  TEXT    NOT NULL,
+    phone TEXT    NOT NULL,
+    gender TEXT    NOT NULL
+);
+
+CREATE TABLE employee (
+    id           INTEGER UNIQUE PRIMARY KEY
+                          NOT NULL,
+      user    TEXT     NOT NULL,
+    password     TEXT     NOT NULL,
+    phone       TEXT     NOT NULL,
+    gender       TEXT     NOT NULL,
+    admin_rights INTEGER NOT NULL
+);
+
+CREATE TABLE room (
+    id     INTEGER UNIQUE PRIMARY KEY,
+    type INTEGER    NOT NULL,
+    empty  INTEGER    NOT NULL,
+    rate  TEXT    NOT NULL
+);
+
+CREATE TABLE check_HM (
+   id INTEGER NOT NULL PRIMARY KEY,
+   customer_id     INTEGER NOT NULL,
+   room_id INTEGER    NOT NULL,
+   FOREIGN KEY (customer_id) REFERENCES customer (id)
+   FOREIGN KEY (room_id) REFERENCES room (id)
+
+);
+
+"
+            command.ExecuteNonQuery()
+        End Try
+
+
+        Form1.model.connection.Close()
         Debug.Print("database tại : " & dbPath)
     End Sub
 End Class

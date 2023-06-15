@@ -1,14 +1,27 @@
-﻿Public Class Form1
-    Public model As New Model
+﻿Imports System.IO
 
+
+
+Public Class Form1
+    Public dbName As String = "hmsoftware_database.db"
+    Public dbPath As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\" & dbName
+    Public model As New Model
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Model.ConnectDataBase()
+        If File.Exists(dbPath) = False Then
+            File.Create(dbPath)
+            MsgBox("đã tạo database, vui lòng mở lại ứng dụng")
+            Quit()
+            Return
+        End If
+        model.CreateDataBase()
 
         SwitchForm(Login)
+        pnlLeft.Visible = False
+
     End Sub
 
     Public Sub Quit()
-
+        Login.Close()
 
         Me.Close()
     End Sub
@@ -51,4 +64,33 @@
         SwitchForm(Employee)
         btnEmployee.Checked = True
     End Sub
+
+
+    Function ChangeBoolToNum(value As Boolean) As Integer
+        If value Then
+            Return 1
+
+        Else
+            Return 0
+        End If
+    End Function
+
+    Function ChangeNumToBool(value As Integer) As Boolean
+        If value = 1 Then
+            Return True
+        ElseIf value = 0 Then
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Function CheckNull(text As String) As Boolean
+        If text = "" Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
 End Class
