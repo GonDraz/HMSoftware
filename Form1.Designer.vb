@@ -25,7 +25,7 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.pnlTop = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lbName = New System.Windows.Forms.Label()
+        Me.lbNameProgram = New System.Windows.Forms.Label()
         Me.pnlLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnCust = New Guna.UI2.WinForms.Guna2Button()
         Me.btnRoom = New Guna.UI2.WinForms.Guna2Button()
@@ -34,6 +34,7 @@ Partial Class Form1
         Me.btnCheckIn = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlMain = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.lbNameUser = New System.Windows.Forms.Label()
         Me.pnlTop.SuspendLayout()
         Me.pnlLeft.SuspendLayout()
         Me.SuspendLayout()
@@ -46,27 +47,28 @@ Partial Class Form1
         'pnlTop
         '
         Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(157, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.pnlTop.Controls.Add(Me.lbName)
+        Me.pnlTop.Controls.Add(Me.lbNameProgram)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Name = "pnlTop"
         Me.pnlTop.Size = New System.Drawing.Size(960, 24)
         Me.pnlTop.TabIndex = 0
         '
-        'lbName
+        'lbNameProgram
         '
-        Me.lbName.AutoSize = True
-        Me.lbName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.lbName.Location = New System.Drawing.Point(12, 4)
-        Me.lbName.Name = "lbName"
-        Me.lbName.Size = New System.Drawing.Size(108, 20)
-        Me.lbName.TabIndex = 0
-        Me.lbName.Text = "HMSoftware"
+        Me.lbNameProgram.AutoSize = True
+        Me.lbNameProgram.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNameProgram.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.lbNameProgram.Location = New System.Drawing.Point(12, 4)
+        Me.lbNameProgram.Name = "lbNameProgram"
+        Me.lbNameProgram.Size = New System.Drawing.Size(108, 20)
+        Me.lbNameProgram.TabIndex = 0
+        Me.lbNameProgram.Text = "HMSoftware"
         '
         'pnlLeft
         '
         Me.pnlLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.pnlLeft.Controls.Add(Me.lbNameUser)
         Me.pnlLeft.Controls.Add(Me.btnCust)
         Me.pnlLeft.Controls.Add(Me.btnRoom)
         Me.pnlLeft.Controls.Add(Me.btnEmployee)
@@ -141,11 +143,11 @@ Partial Class Form1
         'lbQuit
         '
         Me.lbQuit.AutoSize = True
-        Me.lbQuit.Font = New System.Drawing.Font("Quicksand Bold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbQuit.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbQuit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.lbQuit.Location = New System.Drawing.Point(60, 459)
         Me.lbQuit.Name = "lbQuit"
-        Me.lbQuit.Size = New System.Drawing.Size(112, 48)
+        Me.lbQuit.Size = New System.Drawing.Size(105, 37)
         Me.lbQuit.TabIndex = 1
         Me.lbQuit.Text = "Thoát"
         '
@@ -184,6 +186,17 @@ Partial Class Form1
         Me.Guna2DragControl1.TargetControl = Me.pnlTop
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
+        'lbNameUser
+        '
+        Me.lbNameUser.AutoSize = True
+        Me.lbNameUser.Font = New System.Drawing.Font("Quicksand", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNameUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.lbNameUser.Location = New System.Drawing.Point(19, 48)
+        Me.lbNameUser.Name = "lbNameUser"
+        Me.lbNameUser.Size = New System.Drawing.Size(83, 33)
+        Me.lbNameUser.TabIndex = 5
+        Me.lbNameUser.Text = "Label1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -209,10 +222,11 @@ Partial Class Form1
     Friend WithEvents pnlLeft As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents pnlTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
-    Friend WithEvents lbName As Label
+    Friend WithEvents lbNameProgram As Label
     Friend WithEvents lbQuit As Label
     Friend WithEvents btnCheckIn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCust As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnRoom As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEmployee As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lbNameUser As Label
 End Class

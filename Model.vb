@@ -22,6 +22,7 @@ Public Class Model
             command.ExecuteNonQuery()
 
         Catch ex As Exception
+            Debug.Print("ex: " & ex.ToString)
             command.CommandText = "
 CREATE TABLE customer (
     id     INTEGER UNIQUE PRIMARY KEY
@@ -57,12 +58,11 @@ CREATE TABLE check_HM (
 
 );
 
+insert into employee(user,password,phone,gender,admin_rights) values ('admin','admin','0336182287','Nam',1)
 "
             command.ExecuteNonQuery()
         End Try
 
-
-        Form1.model.connection.Close()
         Debug.Print("database tại : " & dbPath)
     End Sub
 End Class

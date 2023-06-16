@@ -14,14 +14,12 @@ Public Class Employee
     End Sub
     Private Sub LoadTable()
 
-        Form1.model.connection.Open()
-        Form1.model.command.Connection = Form1.model.connection
+
         Form1.model.command.CommandText = "select * from employee"
         Dim rdr As SQLiteDataReader = Form1.model.command.ExecuteReader
 
         table.Load(rdr)
         dataViewEmployee.DataSource = table
-        Form1.model.connection.Close()
     End Sub
 
 
@@ -47,8 +45,6 @@ Public Class Employee
             MsgBox("Vui lòng điền đầy đủ thông tin!")
             Return
         End If
-        Form1.model.connection.Open()
-        Form1.model.command.Connection = Form1.model.connection
 
         Form1.model.command.CommandText = "insert into employee(user,password,phone,gender,admin_rights) values (@user,@password,@phone,@gender,@admin_rights)"
         Form1.model.command.Parameters.AddWithValue("@user", tbUser.Text)
@@ -58,7 +54,6 @@ Public Class Employee
         Form1.model.command.Parameters.AddWithValue("@admin_rights", Form1.ChangeBoolToNum(checkAD.Checked))
 
         Form1.model.command.ExecuteNonQuery()
-        Form1.model.connection.Close()
 
         Empty()
         loadTable()
@@ -98,15 +93,12 @@ Public Class Employee
         answer = MsgBox("Bạn có muốn xóa 'Nhân Sự' này không?", vbYesNo, "Xác nhận")
 
         If answer = vbYes Then
-            Form1.model.connection.Open()
-            Form1.model.command.Connection = Form1.model.connection
 
 
             Form1.model.command.CommandText = "DELETE FROM employee WHERE id = @id "
             Form1.model.command.Parameters.AddWithValue("@id", tbId.Text)
 
             Form1.model.command.ExecuteNonQuery()
-            Form1.model.connection.Close()
             Empty()
             dataViewEmployee.Rows.RemoveAt(indexSelect)
         End If
@@ -134,8 +126,6 @@ Public Class Employee
         answer = MsgBox("Bạn có muốn sửa 'Nhân Sự' này không?", vbYesNo, "Xác nhận")
 
         If answer = vbYes Then
-            Form1.model.connection.Open()
-            Form1.model.command.Connection = Form1.model.connection
 
             Form1.model.command.CommandText = "UPDATE employee SET user = @user, password = @password, phone = @phone , gender = @gender , admin_rights = @admin_rights WHERE id = @id"
 
@@ -147,7 +137,6 @@ Public Class Employee
             Form1.model.command.Parameters.AddWithValue("@admin_rights", Form1.ChangeBoolToNum(checkAD.Checked))
 
             Form1.model.command.ExecuteNonQuery()
-            Form1.model.connection.Close()
 
             Empty()
             LoadTable()
