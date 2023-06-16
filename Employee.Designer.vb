@@ -293,10 +293,10 @@ Partial Class Employee
         Me.checkAD.CheckedState.BorderRadius = 0
         Me.checkAD.CheckedState.BorderThickness = 0
         Me.checkAD.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.checkAD.Font = New System.Drawing.Font("Quicksand Bold", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.checkAD.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.checkAD.Location = New System.Drawing.Point(425, 278)
         Me.checkAD.Name = "checkAD"
-        Me.checkAD.Size = New System.Drawing.Size(122, 23)
+        Me.checkAD.Size = New System.Drawing.Size(124, 20)
         Me.checkAD.TabIndex = 24
         Me.checkAD.Text = "Quyền quản lý"
         Me.checkAD.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(237, Byte), Integer))
