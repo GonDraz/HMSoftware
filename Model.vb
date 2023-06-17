@@ -58,7 +58,11 @@ CREATE TABLE check_HM (
 
 );
 
-insert into employee(user,password,phone,gender,admin_rights) values ('admin','admin','0336182287','Nam',1)
+insert into employee(user,password,phone,gender,admin_rights) values ('admin','admin','0000000000','Nam',1)
+insert into employee(user,password,phone,gender,admin_rights) values ('haiha','2722245154','0336182287','Nam',0)
+insert into employee(user,password,phone,gender,admin_rights) values ('duc','admin','0336182287','Nam',0)
+insert into employee(user,password,phone,gender,admin_rights) values ('dang','admin','0336182287','Nam',0)
+insert into employee(user,password,phone,gender,admin_rights) values ('binh','admin','0336182287','Nam',0)
 "
             command.ExecuteNonQuery()
         End Try
