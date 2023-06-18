@@ -14,12 +14,15 @@ Public Class Employee
     End Sub
     Private Sub LoadTable()
 
-
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
         Form1.model.command.CommandText = "select * from employee"
         Dim rdr As SQLiteDataReader = Form1.model.command.ExecuteReader
 
         table.Load(rdr)
         dataViewEmployee.DataSource = table
+        Form1.model.connection.Close()
+
     End Sub
 
 
@@ -45,6 +48,9 @@ Public Class Employee
             MsgBox("Vui lòng điền đầy đủ thông tin!")
             Return
         End If
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
+
 
         Form1.model.command.CommandText = "insert into employee(user,password,phone,gender,admin_rights) values (@user,@password,@phone,@gender,@admin_rights)"
         Form1.model.command.Parameters.AddWithValue("@user", tbUser.Text)
@@ -56,7 +62,9 @@ Public Class Employee
         Form1.model.command.ExecuteNonQuery()
 
         Empty()
-        loadTable()
+        Form1.model.connection.Close()
+
+        LoadTable()
     End Sub
 
     Private Sub dataViewEmployee_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataViewEmployee.CellClick
@@ -65,6 +73,7 @@ Public Class Employee
         If indexSelect < 0 Then
             Return
         End If
+
 
         selectRow = dataViewEmployee.Rows(indexSelect)
         tbId.Text = selectRow.Cells(0).Value.ToString()
@@ -94,12 +103,14 @@ Public Class Employee
 
         If answer = vbYes Then
 
-
+            Form1.model.connection.Open()
+            Form1.model.command.Connection = Form1.model.connection
             Form1.model.command.CommandText = "DELETE FROM employee WHERE id = @id "
             Form1.model.command.Parameters.AddWithValue("@id", tbId.Text)
 
             Form1.model.command.ExecuteNonQuery()
             Empty()
+            Form1.model.connection.Close()
             dataViewEmployee.Rows.RemoveAt(indexSelect)
         End If
     End Sub
@@ -126,7 +137,8 @@ Public Class Employee
         answer = MsgBox("Bạn có muốn sửa 'Nhân Sự' này không?", vbYesNo, "Xác nhận")
 
         If answer = vbYes Then
-
+            Form1.model.connection.Open()
+            Form1.model.command.Connection = Form1.model.connection
             Form1.model.command.CommandText = "UPDATE employee SET user = @user, password = @password, phone = @phone , gender = @gender , admin_rights = @admin_rights WHERE id = @id"
 
             Form1.model.command.Parameters.AddWithValue("@id", tbId.Text)
@@ -139,7 +151,9 @@ Public Class Employee
             Form1.model.command.ExecuteNonQuery()
 
             Empty()
+            Form1.model.connection.Close()
             LoadTable()
         End If
     End Sub
+
 End Class

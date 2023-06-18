@@ -59,7 +59,7 @@ Partial Class Employee
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dataViewEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dataViewEmployee.ColumnHeadersHeight = 4
+        Me.dataViewEmployee.ColumnHeadersHeight = 100
         Me.dataViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
@@ -74,6 +74,7 @@ Partial Class Employee
         Me.dataViewEmployee.Name = "dataViewEmployee"
         Me.dataViewEmployee.ReadOnly = True
         Me.dataViewEmployee.RowHeadersVisible = False
+        Me.dataViewEmployee.RowHeadersWidth = 51
         Me.dataViewEmployee.Size = New System.Drawing.Size(416, 492)
         Me.dataViewEmployee.TabIndex = 0
         Me.dataViewEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -88,7 +89,7 @@ Partial Class Employee
         Me.dataViewEmployee.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dataViewEmployee.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.dataViewEmployee.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.Height = 4
+        Me.dataViewEmployee.ThemeStyle.HeaderStyle.Height = 100
         Me.dataViewEmployee.ThemeStyle.ReadOnly = True
         Me.dataViewEmployee.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.dataViewEmployee.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -150,6 +151,7 @@ Partial Class Employee
         Me.tbId.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbId.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbId.Location = New System.Drawing.Point(508, 39)
+        Me.tbId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbId.Name = "tbId"
         Me.tbId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbId.PlaceholderText = ""
@@ -159,13 +161,16 @@ Partial Class Employee
         '
         'btnAdd
         '
+        Me.btnAdd.AutoRoundedCorners = True
+        Me.btnAdd.BorderRadius = 21
         Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnAdd.FillColor = System.Drawing.Color.DarkSlateGray
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(425, 459)
+        Me.btnAdd.Location = New System.Drawing.Point(449, 391)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(65, 45)
         Me.btnAdd.TabIndex = 11
@@ -183,6 +188,7 @@ Partial Class Employee
         Me.tbUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbUser.Location = New System.Drawing.Point(508, 85)
+        Me.tbUser.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbUser.Name = "tbUser"
         Me.tbUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbUser.PlaceholderText = ""
@@ -202,6 +208,7 @@ Partial Class Employee
         Me.tbPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbPassword.Location = New System.Drawing.Point(508, 134)
+        Me.tbPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbPassword.Name = "tbPassword"
         Me.tbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbPassword.PlaceholderText = ""
@@ -221,6 +228,7 @@ Partial Class Employee
         Me.tbPhone.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbPhone.Location = New System.Drawing.Point(508, 184)
+        Me.tbPhone.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbPhone.Name = "tbPhone"
         Me.tbPhone.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbPhone.PlaceholderText = ""
@@ -250,13 +258,16 @@ Partial Class Employee
         '
         'btnEdit
         '
+        Me.btnEdit.AutoRoundedCorners = True
+        Me.btnEdit.BorderRadius = 21
         Me.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnEdit.FillColor = System.Drawing.Color.DarkSlateGray
+        Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(544, 459)
+        Me.btnEdit.Location = New System.Drawing.Point(539, 391)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(65, 45)
         Me.btnEdit.TabIndex = 21
@@ -264,13 +275,16 @@ Partial Class Employee
         '
         'btnDelete
         '
+        Me.btnDelete.AutoRoundedCorners = True
+        Me.btnDelete.BorderRadius = 21
         Me.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnDelete.FillColor = System.Drawing.Color.DarkSlateGray
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnDelete.ForeColor = System.Drawing.Color.White
-        Me.btnDelete.Location = New System.Drawing.Point(643, 459)
+        Me.btnDelete.Location = New System.Drawing.Point(629, 391)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(65, 45)
         Me.btnDelete.TabIndex = 22
@@ -311,7 +325,7 @@ Partial Class Employee
         Me.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbGender.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbGender.Font = New System.Drawing.Font("Quicksand Medium", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.cbGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.cbGender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cbGender.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.cbGender.ItemHeight = 30

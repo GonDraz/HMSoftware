@@ -14,13 +14,14 @@ Public Class Room
     End Sub
 
     Private Sub LoadTable()
-
-
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
         Form1.model.command.CommandText = "select * from room"
         Dim rdr As SQLiteDataReader = Form1.model.command.ExecuteReader
 
         Table.Load(rdr)
         dataViewRoom.DataSource = table
+        Form1.model.connection.Close()
     End Sub
     Private Sub Empty_room()
 
@@ -39,13 +40,15 @@ Public Class Room
             MsgBox("Vui lòng điền đầy đủ thông tin!")
 
         End If
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
 
         Form1.model.command.CommandText = "insert into room(type,rate,empty) values (@type,@rate,@empty)"
         Form1.model.command.Parameters.AddWithValue("@type", tbType.Text)
         Form1.model.command.Parameters.AddWithValue("@rate", tbRate.Text)
         Form1.model.command.Parameters.AddWithValue("@empty", nmrEmpty.Text)
         Form1.model.command.ExecuteNonQuery()
-
+        Form1.model.connection.Close()
         Empty_room()
         LoadTable()
     End Sub
@@ -82,11 +85,13 @@ Public Class Room
 
         If answer = vbYes Then
 
-
+            Form1.model.connection.Open()
+            Form1.model.command.Connection = Form1.model.connection
             Form1.model.command.CommandText = "DELETE FROM room WHERE id = @id "
             Form1.model.command.Parameters.AddWithValue("@id", tbId_room.Text)
 
             Form1.model.command.ExecuteNonQuery()
+            Form1.model.connection.Close()
             Empty_room()
             dataViewRoom.Rows.RemoveAt(indexSelect)
         End If
@@ -113,6 +118,8 @@ Public Class Room
         answer = MsgBox("Bạn có muốn sửa 'Phòng' này không?", vbYesNo, "Xác nhận")
 
         If answer = vbYes Then
+            Form1.model.connection.Open()
+            Form1.model.command.Connection = Form1.model.connection
 
             Form1.model.command.CommandText = "UPDATE room SET type = @type,empty = @empty ,rate = @rate  WHERE id = @id"
 
@@ -123,9 +130,9 @@ Public Class Room
             Form1.model.command.ExecuteNonQuery()
 
             Empty_room()
+            Form1.model.connection.Close()
             LoadTable()
         End If
     End Sub
-
 
 End Class

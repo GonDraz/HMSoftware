@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CheckIn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,25 @@ Partial Class CheckIn
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbId = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblID = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.dataViewEmployee = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.dataviewCheckIn = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.lblUser = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.tbUser = New Guna.UI2.WinForms.Guna2TextBox()
-        CType(Me.dataViewEmployee, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnEdit = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnDelete = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
+        Me.textReset = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.nmrRoom = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.nmrCust = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        CType(Me.dataviewCheckIn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nmrRoom, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nmrCust, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbId
@@ -63,58 +71,58 @@ Partial Class CheckIn
         Me.lblID.TabIndex = 6
         Me.lblID.Text = "ID"
         '
-        'dataViewEmployee
+        'dataviewCheckIn
         '
-        Me.dataViewEmployee.AllowUserToAddRows = False
-        Me.dataViewEmployee.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dataViewEmployee.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dataViewEmployee.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dataViewEmployee.ColumnHeadersHeight = 4
-        Me.dataViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dataViewEmployee.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dataViewEmployee.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataViewEmployee.Location = New System.Drawing.Point(12, 12)
-        Me.dataViewEmployee.Name = "dataViewEmployee"
-        Me.dataViewEmployee.ReadOnly = True
-        Me.dataViewEmployee.RowHeadersVisible = False
-        Me.dataViewEmployee.Size = New System.Drawing.Size(416, 492)
-        Me.dataViewEmployee.TabIndex = 8
-        Me.dataViewEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dataViewEmployee.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.dataViewEmployee.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.dataViewEmployee.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.dataViewEmployee.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.dataViewEmployee.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dataViewEmployee.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dataViewEmployee.ThemeStyle.HeaderStyle.Height = 4
-        Me.dataViewEmployee.ThemeStyle.ReadOnly = True
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.Height = 22
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataViewEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dataviewCheckIn.AllowUserToAddRows = False
+        Me.dataviewCheckIn.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dataviewCheckIn.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dataviewCheckIn.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dataviewCheckIn.ColumnHeadersHeight = 100
+        Me.dataviewCheckIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dataviewCheckIn.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dataviewCheckIn.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dataviewCheckIn.Location = New System.Drawing.Point(12, 12)
+        Me.dataviewCheckIn.Name = "dataviewCheckIn"
+        Me.dataviewCheckIn.ReadOnly = True
+        Me.dataviewCheckIn.RowHeadersVisible = False
+        Me.dataviewCheckIn.Size = New System.Drawing.Size(416, 492)
+        Me.dataviewCheckIn.TabIndex = 8
+        Me.dataviewCheckIn.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dataviewCheckIn.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dataviewCheckIn.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dataviewCheckIn.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dataviewCheckIn.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dataviewCheckIn.ThemeStyle.BackColor = System.Drawing.Color.White
+        Me.dataviewCheckIn.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dataviewCheckIn.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dataviewCheckIn.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dataviewCheckIn.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dataviewCheckIn.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dataviewCheckIn.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dataviewCheckIn.ThemeStyle.HeaderStyle.Height = 100
+        Me.dataviewCheckIn.ThemeStyle.ReadOnly = True
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.Height = 22
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dataviewCheckIn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
         'lblUser
         '
@@ -126,24 +134,89 @@ Partial Class CheckIn
         Me.lblUser.TabIndex = 17
         Me.lblUser.Text = "Khách hàng"
         '
-        'tbUser
+        'Guna2HtmlLabel1
         '
-        Me.tbUser.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.tbUser.DefaultText = ""
-        Me.tbUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.tbUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.tbUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.tbUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.tbUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tbUser.Location = New System.Drawing.Point(548, 43)
-        Me.tbUser.Name = "tbUser"
-        Me.tbUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.tbUser.PlaceholderText = ""
-        Me.tbUser.SelectedText = ""
-        Me.tbUser.Size = New System.Drawing.Size(139, 25)
-        Me.tbUser.TabIndex = 16
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(450, 113)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(49, 22)
+        Me.Guna2HtmlLabel1.TabIndex = 19
+        Me.Guna2HtmlLabel1.Text = "Phòng"
+        '
+        'btnEdit
+        '
+        Me.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Location = New System.Drawing.Point(537, 459)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(65, 45)
+        Me.btnEdit.TabIndex = 28
+        Me.btnEdit.Text = "Sửa"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnDelete.ForeColor = System.Drawing.Color.White
+        Me.btnDelete.Location = New System.Drawing.Point(643, 459)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(65, 45)
+        Me.btnDelete.TabIndex = 27
+        Me.btnDelete.Text = "Xóa"
+        '
+        'btnAdd
+        '
+        Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnAdd.ForeColor = System.Drawing.Color.White
+        Me.btnAdd.Location = New System.Drawing.Point(437, 459)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(65, 45)
+        Me.btnAdd.TabIndex = 26
+        Me.btnAdd.Text = "Thêm"
+        '
+        'textReset
+        '
+        Me.textReset.BackColor = System.Drawing.Color.Transparent
+        Me.textReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textReset.Location = New System.Drawing.Point(643, 343)
+        Me.textReset.Name = "textReset"
+        Me.textReset.Size = New System.Drawing.Size(48, 22)
+        Me.textReset.TabIndex = 29
+        Me.textReset.Text = "Đặt lại"
+        '
+        'nmrRoom
+        '
+        Me.nmrRoom.BackColor = System.Drawing.Color.Transparent
+        Me.nmrRoom.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.nmrRoom.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.nmrRoom.Location = New System.Drawing.Point(544, 105)
+        Me.nmrRoom.Name = "nmrRoom"
+        Me.nmrRoom.Size = New System.Drawing.Size(104, 30)
+        Me.nmrRoom.TabIndex = 30
+        Me.nmrRoom.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'nmrCust
+        '
+        Me.nmrCust.BackColor = System.Drawing.Color.Transparent
+        Me.nmrCust.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.nmrCust.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.nmrCust.Location = New System.Drawing.Point(544, 46)
+        Me.nmrCust.Name = "nmrCust"
+        Me.nmrCust.Size = New System.Drawing.Size(104, 30)
+        Me.nmrCust.TabIndex = 31
+        Me.nmrCust.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'CheckIn
         '
@@ -151,15 +224,23 @@ Partial Class CheckIn
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(720, 516)
+        Me.Controls.Add(Me.nmrCust)
+        Me.Controls.Add(Me.nmrRoom)
+        Me.Controls.Add(Me.textReset)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.lblUser)
-        Me.Controls.Add(Me.tbUser)
-        Me.Controls.Add(Me.dataViewEmployee)
+        Me.Controls.Add(Me.dataviewCheckIn)
         Me.Controls.Add(Me.tbId)
         Me.Controls.Add(Me.lblID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CheckIn"
         Me.Text = "CheckIn"
-        CType(Me.dataViewEmployee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataviewCheckIn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nmrRoom, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nmrCust, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -167,7 +248,13 @@ Partial Class CheckIn
 
     Friend WithEvents tbId As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lblID As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents dataViewEmployee As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents dataviewCheckIn As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents lblUser As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents tbUser As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnDelete As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents textReset As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents nmrRoom As Guna.UI2.WinForms.Guna2NumericUpDown
+    Friend WithEvents nmrCust As Guna.UI2.WinForms.Guna2NumericUpDown
 End Class

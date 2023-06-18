@@ -17,12 +17,9 @@ Public Class Form1
 
         SwitchForm(Login)
         pnlLeft.Visible = False
-
     End Sub
 
     Public Sub Quit()
-        Login.Close()
-
         Me.Close()
     End Sub
 

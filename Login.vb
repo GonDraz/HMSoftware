@@ -7,6 +7,8 @@ Public Class Login
             MsgBox("vui lòng điền đầy đủ thông tin!")
             Return
         End If
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
 
         Form1.model.command.CommandText = "SELECT * FROM employee WHERE (user = @user) AND (password = @password)"
 
@@ -23,16 +25,19 @@ Public Class Login
             Else
                 Form1.btnEmployee.Enabled = False
             End If
-
             Form1.lbNameUser.Text = rdr("user").ToString
+            rdr.Close()
+            Form1.model.connection.Close()
             Form1.pnlLeft.Visible = True
             Form1.SwitchForm(CheckIn)
         Else
             MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác")
+            Form1.model.connection.Close()
         End If
 
         tbPassword.Clear()
         tbUser.Clear()
+
     End Sub
 
     Private Sub lbQuit_Click(sender As Object, e As EventArgs) Handles lbQuit.Click

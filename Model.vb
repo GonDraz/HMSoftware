@@ -11,17 +11,16 @@ Public Class Model
 
     Public table As New DataTable
 
-
     Public Sub CreateDataBase()
-
         connection.Open()
         command.Connection = connection
+
         command.CommandText = "Select * from customer"
 
         Try
             command.ExecuteNonQuery()
-
         Catch ex As Exception
+
             Debug.Print("ex: " & ex.ToString)
             command.CommandText = "
 CREATE TABLE customer (
@@ -61,8 +60,11 @@ CREATE TABLE check_HM (
 insert into employee(user,password,phone,gender,admin_rights) values ('admin','admin','0000000000','Nam',1)
 "
             command.ExecuteNonQuery()
+            connection.Close()
         End Try
 
         Debug.Print("database tại : " & dbPath)
+        connection.Close()
+
     End Sub
 End Class

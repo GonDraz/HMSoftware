@@ -1,4 +1,5 @@
-﻿Imports System.ComponentModel.Design.ObjectSelectorEditor
+﻿Imports System.Collections.ObjectModel
+Imports System.ComponentModel.Design.ObjectSelectorEditor
 Imports System.Data.SQLite
 Imports System.Web.UI.WebControls
 
@@ -7,22 +8,21 @@ Public Class Cust
     Dim adBool As Boolean
     Dim selectRow As DataGridViewRow
     Dim indexSelect As Integer = 0
-    Private Sub Guna2HtmlLabel2_Click(sender As Object, e As EventArgs) Handles lblPhone_Cus.Click
-
-    End Sub
 
     Private Sub Cust_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadTable()
     End Sub
 
     Private Sub LoadTable()
-
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
 
         Form1.model.command.CommandText = "select * from customer"
         Dim rdr As SQLiteDataReader = Form1.model.command.ExecuteReader
 
-        Table.Load(rdr)
-        dataViewCustomer.DataSource = Table
+        table.Load(rdr)
+        dataViewCustomer.DataSource = table
+        Form1.model.connection.Close()
     End Sub
     Private Sub Empty()
 
@@ -38,6 +38,9 @@ Public Class Cust
         '    Return
         'End If
 
+
+        Form1.model.connection.Open()
+        Form1.model.command.Connection = Form1.model.connection
         Form1.model.command.CommandText = "insert into customer(name,phone,gender) values (@name,@phone,@gender)"
         Form1.model.command.Parameters.AddWithValue("@name", txtName_Cus.Text)
         Form1.model.command.Parameters.AddWithValue("@phone", txtPhone_Cus.Text)
@@ -46,7 +49,7 @@ Public Class Cust
 
 
         Form1.model.command.ExecuteNonQuery()
-
+        Form1.model.connection.Close()
         Empty()
         LoadTable()
     End Sub

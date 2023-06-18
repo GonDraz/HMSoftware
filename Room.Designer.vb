@@ -52,13 +52,16 @@ Partial Class Room
         '
         'btnAdd_room
         '
+        Me.btnAdd_room.AutoRoundedCorners = True
+        Me.btnAdd_room.BorderRadius = 21
         Me.btnAdd_room.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd_room.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd_room.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnAdd_room.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAdd_room.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnAdd_room.FillColor = System.Drawing.Color.DarkSlateGray
+        Me.btnAdd_room.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnAdd_room.ForeColor = System.Drawing.Color.White
-        Me.btnAdd_room.Location = New System.Drawing.Point(437, 459)
+        Me.btnAdd_room.Location = New System.Drawing.Point(434, 410)
         Me.btnAdd_room.Name = "btnAdd_room"
         Me.btnAdd_room.Size = New System.Drawing.Size(65, 45)
         Me.btnAdd_room.TabIndex = 12
@@ -66,13 +69,16 @@ Partial Class Room
         '
         'btnDelete_room
         '
+        Me.btnDelete_room.AutoRoundedCorners = True
+        Me.btnDelete_room.BorderRadius = 21
         Me.btnDelete_room.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnDelete_room.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnDelete_room.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnDelete_room.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnDelete_room.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnDelete_room.FillColor = System.Drawing.Color.DarkSlateGray
+        Me.btnDelete_room.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnDelete_room.ForeColor = System.Drawing.Color.White
-        Me.btnDelete_room.Location = New System.Drawing.Point(643, 459)
+        Me.btnDelete_room.Location = New System.Drawing.Point(643, 410)
         Me.btnDelete_room.Name = "btnDelete_room"
         Me.btnDelete_room.Size = New System.Drawing.Size(65, 45)
         Me.btnDelete_room.TabIndex = 13
@@ -112,7 +118,7 @@ Partial Class Room
         '
         Me.lblRate.BackColor = System.Drawing.Color.Transparent
         Me.lblRate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRate.Location = New System.Drawing.Point(431, 223)
+        Me.lblRate.Location = New System.Drawing.Point(439, 223)
         Me.lblRate.Name = "lblRate"
         Me.lblRate.Size = New System.Drawing.Size(71, 22)
         Me.lblRate.TabIndex = 17
@@ -131,6 +137,7 @@ Partial Class Room
         Me.tbId_room.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbId_room.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbId_room.Location = New System.Drawing.Point(508, 45)
+        Me.tbId_room.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbId_room.Name = "tbId_room"
         Me.tbId_room.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbId_room.PlaceholderText = ""
@@ -150,6 +157,7 @@ Partial Class Room
         Me.tbType.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbType.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbType.Location = New System.Drawing.Point(508, 104)
+        Me.tbType.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbType.Name = "tbType"
         Me.tbType.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbType.PlaceholderText = ""
@@ -169,6 +177,7 @@ Partial Class Room
         Me.tbRate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.tbRate.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.tbRate.Location = New System.Drawing.Point(508, 223)
+        Me.tbRate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbRate.Name = "tbRate"
         Me.tbRate.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.tbRate.PlaceholderText = ""
@@ -190,7 +199,7 @@ Partial Class Room
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dataViewRoom.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dataViewRoom.ColumnHeadersHeight = 4
+        Me.dataViewRoom.ColumnHeadersHeight = 100
         Me.dataViewRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
@@ -201,10 +210,11 @@ Partial Class Room
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dataViewRoom.DefaultCellStyle = DataGridViewCellStyle3
         Me.dataViewRoom.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dataViewRoom.Location = New System.Drawing.Point(-1, 12)
+        Me.dataViewRoom.Location = New System.Drawing.Point(-2, 1)
         Me.dataViewRoom.Name = "dataViewRoom"
         Me.dataViewRoom.ReadOnly = True
         Me.dataViewRoom.RowHeadersVisible = False
+        Me.dataViewRoom.RowHeadersWidth = 51
         Me.dataViewRoom.Size = New System.Drawing.Size(416, 492)
         Me.dataViewRoom.TabIndex = 22
         Me.dataViewRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -219,7 +229,7 @@ Partial Class Room
         Me.dataViewRoom.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dataViewRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.dataViewRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dataViewRoom.ThemeStyle.HeaderStyle.Height = 4
+        Me.dataViewRoom.ThemeStyle.HeaderStyle.Height = 100
         Me.dataViewRoom.ThemeStyle.ReadOnly = True
         Me.dataViewRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.dataViewRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -235,20 +245,25 @@ Partial Class Room
         Me.nmrEmpty.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.nmrEmpty.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.nmrEmpty.Location = New System.Drawing.Point(508, 160)
+        Me.nmrEmpty.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.nmrEmpty.Name = "nmrEmpty"
         Me.nmrEmpty.Size = New System.Drawing.Size(104, 30)
         Me.nmrEmpty.TabIndex = 23
+        Me.nmrEmpty.UpDownButtonFillColor = System.Drawing.Color.Gainsboro
         Me.nmrEmpty.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'btnEdit_room
         '
+        Me.btnEdit_room.AutoRoundedCorners = True
+        Me.btnEdit_room.BorderRadius = 21
         Me.btnEdit_room.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnEdit_room.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnEdit_room.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnEdit_room.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnEdit_room.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnEdit_room.FillColor = System.Drawing.Color.DarkSlateGray
+        Me.btnEdit_room.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnEdit_room.ForeColor = System.Drawing.Color.White
-        Me.btnEdit_room.Location = New System.Drawing.Point(537, 459)
+        Me.btnEdit_room.Location = New System.Drawing.Point(538, 410)
         Me.btnEdit_room.Name = "btnEdit_room"
         Me.btnEdit_room.Size = New System.Drawing.Size(65, 45)
         Me.btnEdit_room.TabIndex = 25
@@ -258,7 +273,7 @@ Partial Class Room
         '
         Me.textReset_room.BackColor = System.Drawing.Color.Transparent
         Me.textReset_room.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textReset_room.Location = New System.Drawing.Point(660, 270)
+        Me.textReset_room.Location = New System.Drawing.Point(643, 288)
         Me.textReset_room.Name = "textReset_room"
         Me.textReset_room.Size = New System.Drawing.Size(48, 22)
         Me.textReset_room.TabIndex = 26
